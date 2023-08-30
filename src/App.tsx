@@ -1,13 +1,13 @@
-import {Main} from "./main.tsx";
-import './index.css'
+import { Main } from './main.tsx';
+import GlobalStyles from './globalStyles.ts';
 
 function App() {
-
   return (
     <>
-        <Main />
+      <GlobalStyles />
+      <Main />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

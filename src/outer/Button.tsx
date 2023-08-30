@@ -1,13 +1,21 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  background: transparent;
+  background: black;
   border-radius: 15px;
-  border: 2px solid #BF4F74;
-  color: #BF4F74;
-  margin: 2rem 1em;
+  border: black;
+  color: white;
   padding: 1.25em 2em;
+  font-family: inherit;
+  font-size: 0.7rem;
+  cursor: pointer;
+  min-width: 150px;
+
   &:hover {
-    background: lightgray;
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 `

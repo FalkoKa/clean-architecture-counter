@@ -1,24 +1,54 @@
-import {CounterViewModel} from "../adapters/Presenter/CounterPresenter.ts";
-import {useContext} from "react";
-import {Context} from "./Context.ts";
-import {Button} from "./Button.tsx";
+import { CounterViewModel } from './../adapters/Presenter/CounterPresenter.ts';
+import { useContext } from 'react';
+import { Context } from './Context.ts';
+import { Button } from './Button.tsx';
+import styled from 'styled-components';
 
 export type Props = {
-    counterViewModel: CounterViewModel
+  counterViewModel: CounterViewModel;
+};
+
+export default function ReactCounter({ counterViewModel }: Props) {
+  const { counter } = counterViewModel;
+  const context = useContext(Context);
+
+  return (
+    <Wrapper>
+      <div>Counter: {counter}</div>
+      <ButtonWrapper>
+        <Button onClick={() => context?.controller?.executeIncrementCounter()}>
+          Add
+        </Button>
+        <Button onClick={() => context?.controller?.executeDecrementCounter()}>
+          Subtract
+        </Button>
+      </ButtonWrapper>
+    </Wrapper>
+  );
 }
 
-export default function ReactCounter({counterViewModel}: Props) {
-    const {counter} = counterViewModel
-    const context = useContext(Context)
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+`;
 
+const ButtonWrapper = styled.div`
+  margin: 40px 0;
+  display: flex;
+  gap: 50px;
+  @media only screen and (max-width: 430px) {
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+  }
+`;
 
-    return (
-        <div className="wrapper" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-            <div>Counter: {counter}</div>
-            <div className="buttons">
-                <Button onClick={() => context?.controller?.executeIncrementCounter()}>Add</Button>
-                <Button onClick={() => context?.controller?.executeDecrementCounter()}>Subtract</Button>
-            </div>
-        </div>
-    )
-}
+// styled components
+// local storage
+// interfaces auslagern
+// readme
+
+// tests
