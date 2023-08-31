@@ -1,4 +1,4 @@
-import { CounterViewModel } from './../adapters/Presenter/CounterPresenter.ts';
+import { CounterViewModel } from './../../adapters/Presenter/CounterPresenter.ts';
 import { useContext } from 'react';
 import { Context } from './Context.ts';
 import { Button } from './Button.tsx';
