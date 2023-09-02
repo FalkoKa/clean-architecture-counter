@@ -1,6 +1,6 @@
-import {AbstractUseCase} from "./AbstractUseCase.ts";
+import { AbstractUseCase } from './AbstractUseCase.ts';
 
 export type UseCases = {
-    IncrementCounter: AbstractUseCase<number, void>,
-    DecrementCounter: AbstractUseCase<number, void>
-}
+  IncrementCounter: AbstractUseCase<number, void>;
+  DecrementCounter: AbstractUseCase<number, void>;
+};
