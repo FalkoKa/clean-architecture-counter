@@ -1,4 +1,4 @@
-import { StorageAPI } from '../../adapters/CounterStorage.ts';
+import { StorageAPI } from '../../adapters/interfaces/StorageAPI.ts';
 import { Counter } from '../../domains/Counter.ts';
 
 export class LocalStorageAPI implements StorageAPI {
