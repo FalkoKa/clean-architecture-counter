@@ -45,10 +45,3 @@ const ButtonWrapper = styled.div`
     width: 100%;
   }
 `;
-
-// styled components
-// local storage
-// interfaces auslagern
-// readme
-
-// tests
