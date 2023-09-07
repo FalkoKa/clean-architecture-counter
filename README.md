@@ -1,27 +1,9 @@
-# React + TypeScript + Vite
+## Clean Architecture React Counter App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a very simple react counter app. However, for the purpose of practicing for my software engineer job, this app is built on the Clean Architecture design pattern from uncle bob.
 
-Currently, two official plugins are available:
+To store the counter, I first implemented basically a RAM storage with the CounterStorage adapter. In a next step, I implemented the local storage by simply adding a storage API on the outer circle, that gets injected into the counterstorage adapter through dependency inversion, a fundamental principle of SOLID design pattern and thus, clean architecture.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Additionally, I used styled components for trying that library, as well as testing with the TS Jest library.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+A small, fun project to learn this impressive architectural design pattern
